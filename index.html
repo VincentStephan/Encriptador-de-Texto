@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -29,29 +35,27 @@
             rows="13"
             placeholder="Ingrese el texto aquí"
           ></textarea>
+          <p>
+            <img src="assets/img/advertencia.png" alt="advertencia" /> No usar
+            letra, mayúsculas, acentos u caracteres especiales.
+          </p>
 
           <div class="botones">
-            <p>
-              <img src="assets/img/advertencia.png" alt="advertencia"> No usar letra, mayúsculas, acentos u caracteres
-              especiales.
-            </p>
             <input type="button" value="Encriptar" class="encriptar" />
             <input type="button" value="Desincriptar" class="desencriptar" />
           </div>
         </div>
         <div class="ejecutado">
-          <textarea name="texto" cols="0" rows="16"></textarea>
+          <textarea name="texto" cols="0" rows="15"></textarea>
           <input type="button" value="Copiar" class="boton-copiar" />
         </div>
       </div>
     </main>
     <footer>
       <a href="https://github.com/VincentStephan"
-        ><img
-          src="assets/img/github.png"
-          alt="github"
+        ><img src="assets/img/github.png" alt="github"
       /></a>
-      <p class="copyright">&#169;Creado por Vincent Stephan - 2023</p>
+      <p class="copyright">&#169;Alura | Creado por Vincent Stephan | 2023</p>
     </footer>
   </body>
 </html>
