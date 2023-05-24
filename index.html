@@ -7,6 +7,13 @@
     <title>Encriptador - Alura</title>
     <link rel="icon" href="assets/img/Logo.png" />
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -14,17 +21,28 @@
       <h1>Encriptador de texto</h1>
     </header>
     <main>
-      <div class="ejecutar">
-        <textarea name="texto" cols="100" rows="40"></textarea>
-        <input type="button" value="Incriptar" />
-        <input type="button" value="Desincriptar" />
-        <p>
-          &#9888; No usar letra, mayúsculas, acentos u caracteres especiales.
-        </p>
-      </div>
-      <div class="ejecutado">
-        <textarea name="texto" cols="50" rows="40"></textarea>
-        <input type="button" value="Copiar" />
+      <div class="contenido-principal">
+        <div class="ejecutar">
+          <textarea
+            name="texto"
+            cols="0"
+            rows="12"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+
+          <div class="botones">
+            <p>
+              &#9888; No usar letra, mayúsculas, acentos u caracteres
+              especiales.
+            </p>
+            <input type="button" value="Incriptar" />
+            <input type="button" value="Desincriptar" />
+          </div>
+        </div>
+        <div class="ejecutado">
+          <textarea name="texto" cols="0" rows="15"></textarea>
+          <div></div>
+        </div>
       </div>
     </main>
     <footer>

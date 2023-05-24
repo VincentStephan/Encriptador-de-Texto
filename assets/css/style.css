@@ -1,0 +1,68 @@
+header {
+  display: inline-block;
+  padding: 3em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: inline;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 30px;
+  vertical-align: top;
+}
+
+.contenido-principal {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.ejecutar {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.ejecutar textarea {
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 30px;
+  margin: 0 30% 0 0;
+  color: rgb(170, 0, 255);
+}
+
+.ejecutar textarea::placeholder {
+  color: rgb(170, 0, 255);
+}
+
+.botones {
+  padding: 2em 0 0 0;
+  text-align: left;
+  width: 100%;
+  display: block;
+}
+
+.copiar {
+  position: absolute;
+  left: 73%;
+}
+
+.ejecutado {
+  width: 20%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.ejecutado textarea {
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 23px;
+}
