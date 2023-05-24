@@ -8,17 +8,14 @@ body {
   min-height: 100%;
 }
 
-
-
 /* CSS ENCABEZADO */
-
 
 header {
   display: inline-block;
   padding: 3em;
   width: 100%;
   box-sizing: border-box;
-  background-color:#d8dfe8
+  background-color: #d8dfe8;
 }
 
 .logo {
@@ -35,28 +32,27 @@ header h1 {
   text-align: center;
   font-family: "Press Start 2P", cursive;
   font-size: 30px;
-  
-    animation-name: myAnimation;
-    animation-duration: 3s;
-    animation-iteration-count:initial;
-    animation-direction: alternate;
-    color: rgb(170, 0, 255);
-  }
-  
-  @keyframes myAnimation {
-    0% {
-      color: rgb(0, 0, 0);
-      transform: translateX(0);
-    }
-    50% {
-      color: rgb(133, 88, 152);
-      transform: translateX(0);
-    }
-    100% {
-      color: rgb(170, 0, 255);;
-      transform: translateX(0);
-    }
 
+  animation-name: myAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: initial;
+  animation-direction: alternate;
+  color: rgb(170, 0, 255);
+}
+
+@keyframes myAnimation {
+  0% {
+    color: rgb(0, 0, 0);
+    transform: translateX(0);
+  }
+  50% {
+    color: rgb(133, 88, 152);
+    transform: translateX(0);
+  }
+  100% {
+    color: rgb(170, 0, 255);
+    transform: translateX(0);
+  }
 }
 
 /* CSS CUERPO-PAGINA */
@@ -74,7 +70,6 @@ main {
   display: grid;
   grid-template-columns: 5% 50% 20% 5%;
   grid-gap: 7%;
-
 }
 
 .ejecutar {
@@ -82,9 +77,6 @@ main {
   vertical-align: top;
   grid-row: 1;
   grid-column: 2;
-
-  
-  
 }
 
 .ejecutar textarea {
@@ -96,7 +88,6 @@ main {
   outline: none;
   color: rgb(170, 0, 255);
   padding: 5%;
-  
 }
 
 .ejecutar textarea::placeholder {
@@ -108,8 +99,7 @@ main {
   padding: 0em 0 0% 0;
   text-align: left;
   width: 100%;
-   display: flex;
-  
+  display: flex;
 }
 
 .contenido-principal p {
@@ -134,7 +124,6 @@ main {
   border: solid;
   border-color: #414141;
   cursor: pointer;
- 
 }
 
 .botones .desencriptar {
@@ -147,13 +136,13 @@ main {
   border-width: 1px;
   cursor: pointer;
   border: solid;
-  border-color:#414141;
+  border-color: #414141;
 }
-.botones .encriptar:hover, .botones .desencriptar:hover {
+.botones .encriptar:hover,
+.botones .desencriptar:hover {
   background: #000000;
-  border-color:#000000;
+  border-color: #000000;
   transition: 0.5s;
-
 }
 
 .boton-copiar {
@@ -166,22 +155,18 @@ main {
   border-width: 1px;
   text-align: center;
   cursor: pointer;
-  
 }
 
 .boton-copiar:hover {
   background: #414141;
-  border-color:#414141;
+  border-color: #414141;
   transition: 0.5s;
-
 }
 .ejecutado {
-  
   box-sizing: border-box;
   padding: 10% 2% 0% 2%;
   grid-row: 1;
   grid-column: 3;
-  
 
   /* White */
 
@@ -199,7 +184,6 @@ main {
   font-size: 23px;
   border: none;
   border-radius: 10px;
-
 }
 
 .ejecutado textarea:focus {
@@ -210,19 +194,13 @@ main {
 
 footer {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
- background-color:#8f69b3;
+  font-family: "Roboto", sans-serif;
+  background-color: #8f69b3;
   color: #ffffff;
-
-
-
 }
 
 footer img {
   width: 50px;
-  
-
-
 
   /* para mejorar el rendimiento de la pagina tengo que recortar 
 las dimenciones de las images al tamaño que usare, lo tendre pendiente para
