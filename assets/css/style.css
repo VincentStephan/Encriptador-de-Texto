@@ -21,17 +21,20 @@ header {
 .logo {
   position: absolute;
   top: 3%;
-  box-sizing: border-box;
+  left: 3%;
+  width: 40px;
+ 
 }
 
 header h1 {
   position: absolute;
-  top: 5%;
+  top: 4%;
   right: 0%;
   width: 100%;
   text-align: center;
   font-family: "Press Start 2P", cursive;
   font-size: 30px;
+  box-sizing: border-box;
 
   animation-name: myAnimation;
   animation-duration: 3s;
@@ -47,7 +50,7 @@ header h1 {
   }
   50% {
     color: rgb(133, 88, 152);
-    transform: translateX(0);
+    transform: translateY(0);
   }
   100% {
     color: rgb(170, 0, 255);
@@ -80,7 +83,7 @@ main {
 }
 
 .ejecutar textarea {
-  width: 90%;
+  width: 100%;
   box-sizing: border-box;
   font-size: 30px;
   border-radius: 24px;
@@ -88,6 +91,7 @@ main {
   outline: none;
   color: rgb(170, 0, 255);
   padding: 5%;
+  box-shadow: -1px 13px 24px 2px rgba(0, 0, 0, 0.35);
 }
 
 .ejecutar textarea::placeholder {
@@ -102,14 +106,19 @@ main {
   display: flex;
 }
 
-.contenido-principal p {
+.especificaciones {
+  display: flex;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: #495057;
   opacity: 0.8;
+  padding-top: 2%;
+}
+
+.especificaciones img {
+  padding: 4px;
 }
 
 .botones .encriptar {
@@ -145,6 +154,12 @@ main {
   transition: 0.5s;
 }
 
+.botones .encriptar:active,
+.botones .desencriptar:active {
+  transform: scale(1.2);
+  transition: 200ms;
+}
+
 .boton-copiar {
   padding: 24px;
   background: #d8dfe8;
@@ -162,18 +177,57 @@ main {
   border-color: #414141;
   transition: 0.5s;
 }
-.ejecutado {
-  box-sizing: border-box;
-  padding: 10% 2% 0% 2%;
+
+.boton-copiar:active {
+  transform: scale(1.2);
+  transition: 200ms;
+}
+.ningunmensaje {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   grid-row: 1;
   grid-column: 3;
-
+  box-sizing: border-box;
+  padding: 4% 2% 4% 2%;
   /* White */
 
   background: #ffffff;
   /* shadow */
 
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  box-shadow: -3px 9px 24px 2px rgba(0, 0, 0, 0.35);
+  border-radius: 32px;
+}
+.ningunmensaje h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 120%;
+  margin-bottom: 5%;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #343a40;
+}
+.ningunmensaje p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #495057;
+  font-family: "Roboto", sans-serif;
+}
+
+.ejecutado {
+  display: none;
+  box-sizing: border-box;
+  padding: 4% 4% 0% 4%;
+  grid-row: 1;
+  grid-column: 3;
+  background: #ffffff;
+  box-shadow: -3px 9px 24px 2px rgba(0, 0, 0, 0.35);
   border-radius: 32px;
 }
 
@@ -201,8 +255,128 @@ footer {
 
 footer img {
   width: 50px;
-
-  /* para mejorar el rendimiento de la pagina tengo que recortar 
-las dimenciones de las images al tamaño que usare, lo tendre pendiente para
-proximos proyectos*/
 }
+
+footer img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+/*REPONSIVE*/ 
+
+@media (max-width: 1200px) {
+  
+  .contenido-principal {
+    width: 100%;
+    grid-template-columns: 0% 55% 25% 0%;
+    
+
+  }
+}
+/*Tablet-reponsive*/
+
+@media (max-width: 1024px) {
+
+  .logo {
+
+    width: 30px;
+    top: 7px
+  }
+    
+  header {
+
+    padding-bottom: 5em;
+  }
+
+  header h1 {
+    top: 50px;
+  }
+  .contenido-principal {
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+   
+ 
+     
+
+  }
+
+  .especificaciones {
+    justify-content: center;
+  }
+
+  .ningunmensaje img {
+    display: none;
+   
+  }
+
+  .ejecutado, .ningunmensaje, .ejecutar{
+    width: 70%;
+  }
+   
+  .ejecutado textarea {
+    height: 12em;
+  }
+  .botones {
+
+    justify-content: center;
+    margin-bottom: 3%;
+  }
+
+  .boton-copiar {
+    margin-bottom: 2%;
+  }
+  
+
+
+
+   }
+  
+
+  /*Movil-reponsive*/
+
+  @media (max-width: 575px) {
+
+
+    .logo {
+      width: 30px;
+      top: 5px
+      
+    }
+    header h1 {
+
+      font-size: 18px;
+      top: 50px;
+    }
+    .ejecutado, .ningunmensaje, .ejecutar{
+      width: 90%;
+      margin-bottom: 10%;
+    }
+    .especificaciones img {
+
+      padding-bottom: 10%;
+      box-sizing: border-box;
+    }
+    .botones {
+
+      justify-content: center;
+      margin-bottom: 3%;
+      flex-direction: column;
+      
+    }
+
+    .botones .encriptar, .botones .desencriptar {
+
+      width: 100%;
+      margin-bottom: 8%;
+      
+    }
+    .ejecutado textarea,.ejecutar textarea {
+          
+      height: 10em;
+      
+    }
+  }
+

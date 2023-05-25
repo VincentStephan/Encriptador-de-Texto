@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador - Alura</title>
+    <script src="assets/js/main.js"></script>
     <link rel="icon" href="assets/img/Logo.png" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -35,17 +36,34 @@
             rows="13"
             placeholder="Ingrese el texto aquí"
           ></textarea>
-          <p>
-            <img src="assets/img/advertencia.png" alt="advertencia" /> No usar
-            letra, mayúsculas, acentos u caracteres especiales.
-          </p>
-
+          <section class="especificaciones">
+            <img src="assets/img/advertencia.png" alt="advertencia" />
+            <p>No usar letra, mayúsculas, acentos u caracteres especiales.</p>
+          </section>
           <div class="botones">
-            <input type="button" value="Encriptar" class="encriptar" />
-            <input type="button" value="Desincriptar" class="desencriptar" />
+            <input
+              type="button"
+              value="Encriptar"
+              class="encriptar"
+              onclick="mostrarTexto()"
+            />
+            <input
+              type="button"
+              value="Desincriptar"
+              class="desencriptar"
+              onclick="mostrarTexto()"
+            />
           </div>
         </div>
-        <div class="ejecutado">
+        <div class="ningunmensaje" id="ningunmensaje">
+          <img
+            src="assets/img/ningunmensaje (2).png"
+            alt="imagen de advertencia"
+          />
+          <h2>Ningún mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <div class="ejecutado" id="ejecutado">
           <textarea name="texto" cols="0" rows="15"></textarea>
           <input type="button" value="Copiar" class="boton-copiar" />
         </div>
