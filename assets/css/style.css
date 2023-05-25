@@ -23,7 +23,6 @@ header {
   top: 3%;
   left: 3%;
   width: 40px;
- 
 }
 
 header h1 {
@@ -190,11 +189,7 @@ main {
   grid-column: 3;
   box-sizing: border-box;
   padding: 4% 2% 4% 2%;
-  /* White */
-
   background: #ffffff;
-  /* shadow */
-
   box-shadow: -3px 9px 24px 2px rgba(0, 0, 0, 0.35);
   border-radius: 32px;
 }
@@ -262,29 +257,23 @@ footer img:hover {
   transition: 0.5s;
 }
 
-/*REPONSIVE*/ 
+/*REPONSIVE*/
 
 @media (max-width: 1200px) {
-  
   .contenido-principal {
     width: 100%;
     grid-template-columns: 0% 55% 25% 0%;
-    
-
   }
 }
 /*Tablet-reponsive*/
 
 @media (max-width: 1024px) {
-
   .logo {
-
     width: 30px;
-    top: 7px
+    top: 7px;
   }
-    
-  header {
 
+  header {
     padding-bottom: 5em;
   }
 
@@ -292,15 +281,10 @@ footer img:hover {
     top: 50px;
   }
   .contenido-principal {
-
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
-    align-items:center;
-   
- 
-     
-
+    justify-content: space-around;
+    align-items: center;
   }
 
   .especificaciones {
@@ -309,18 +293,18 @@ footer img:hover {
 
   .ningunmensaje img {
     display: none;
-   
   }
 
-  .ejecutado, .ningunmensaje, .ejecutar{
+  .ejecutado,
+  .ningunmensaje,
+  .ejecutar {
     width: 70%;
   }
-   
+
   .ejecutado textarea {
     height: 12em;
   }
   .botones {
-
     justify-content: center;
     margin-bottom: 3%;
   }
@@ -328,55 +312,42 @@ footer img:hover {
   .boton-copiar {
     margin-bottom: 2%;
   }
-  
+}
 
+/*Movil-reponsive*/
 
-
-   }
-  
-
-  /*Movil-reponsive*/
-
-  @media (max-width: 575px) {
-
-
-    .logo {
-      width: 30px;
-      top: 5px
-      
-    }
-    header h1 {
-
-      font-size: 18px;
-      top: 50px;
-    }
-    .ejecutado, .ningunmensaje, .ejecutar{
-      width: 90%;
-      margin-bottom: 10%;
-    }
-    .especificaciones img {
-
-      padding-bottom: 10%;
-      box-sizing: border-box;
-    }
-    .botones {
-
-      justify-content: center;
-      margin-bottom: 3%;
-      flex-direction: column;
-      
-    }
-
-    .botones .encriptar, .botones .desencriptar {
-
-      width: 100%;
-      margin-bottom: 8%;
-      
-    }
-    .ejecutado textarea,.ejecutar textarea {
-          
-      height: 10em;
-      
-    }
+@media (max-width: 575px) {
+  .logo {
+    width: 30px;
+    top: 5px;
+  }
+  header h1 {
+    font-size: 18px;
+    top: 50px;
+  }
+  .ejecutado,
+  .ningunmensaje,
+  .ejecutar {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+  .especificaciones img {
+    padding-bottom: 10%;
+    box-sizing: border-box;
+  }
+  .botones {
+    justify-content: center;
+    margin-bottom: 3%;
+    flex-direction: column;
   }
 
+  .botones .encriptar,
+  .botones .desencriptar {
+    width: 100%;
+    margin-bottom: 8%;
+  }
+  .ejecutado textarea,
+  .ejecutar textarea {
+    height: 10em;
+  }
+}
