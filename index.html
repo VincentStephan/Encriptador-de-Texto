@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador - Alura</title>
     <script src="assets/js/main.js"></script>
-    <link rel="icon" href="assets/img/Logo.png" />
+    <link rel="icon" href="assets/img/icone-de-cadenas-de-securite-violet.png" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +31,8 @@
       <div class="contenido-principal">
         <div class="ejecutar">
           <textarea
-            name="texto"
+            id="texto"
+            name="text"
             cols="0"
             rows="13"
             placeholder="Ingrese el texto aquí"
@@ -45,15 +46,15 @@
               type="button"
               value="Encriptar"
               class="encriptar"
-              onclick="mostrarTexto()"
+              onclick="esconderNingunmensaje(); encriptar();"
             />
             <input
               type="button"
               value="Desincriptar"
               class="desencriptar"
-              onclick="mostrarTexto()"
+              onclick="esconderNingunmensaje(); desencriptar()"
             />
-          </section >
+          </section>
         </div>
         <section class="ningunmensaje" id="ningunmensaje">
           <img
@@ -64,8 +65,8 @@
           <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </section>
         <section class="ejecutado" id="ejecutado">
-          <textarea name="texto" cols="0" rows="15"></textarea>
-          <input type="button" value="Copiar" class="boton-copiar" />
+          <textarea id="textoEjecutado"name="texto" cols="0" rows="15" readonly></textarea>
+          <input type="button" value="Copiar" class="boton-copiar"onclick="copiarTexto()" />
         </section>
       </div>
     </main>
