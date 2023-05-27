@@ -19,26 +19,15 @@ function copiarTexto() {
 
 function encriptar() {
   // Encripta el texto ingresado utilizando un esquema de reemplazo de caracteres
-  let textarea = document.getElementById("texto").value;
-  let caracteres = textarea.length;
-  let textoEncriptado = "";
-  const llavesEncriptacion = {
-    a: "ai",
-    e: "enter",
-    i: "imes",
-    o: "ober",
-    u: "ufat",
-  };
 
-  for (let caracter = 0; caracter < caracteres; caracter++) {
-    if (llavesEncriptacion.hasOwnProperty(textarea[caracter])) {
-      // Si el caracter existe en las llaves de encriptación, se reemplaza por su valor encriptado
-      textoEncriptado += llavesEncriptacion[textarea[caracter]];
-    } else {
-      // Si no existe en las llaves de encriptación, se mantiene el mismo caracter
-      textoEncriptado += textarea[caracter];
-    }
-  }
+  let texto = document.getElementById("texto").value;
+  let textoEncriptado = texto
+    .replace(/a/g, "ai")
+    .replace(/e/, "enter")
+    .replace(/im/, "imes")
+    .replace(/o/, "ober")
+    .replace(/u/, "ufat");
+
 
   MostrarMensaje(textoEncriptado);
 }
