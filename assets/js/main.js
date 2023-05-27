@@ -23,13 +23,17 @@ function encriptar() {
   let texto = document.getElementById("texto").value;
   let textoEncriptado = texto
     .replace(/a/g, "ai")
-    .replace(/e/, "enter")
-    .replace(/im/, "imes")
-    .replace(/o/, "ober")
-    .replace(/u/, "ufat");
+    .replace(/e/g, "enter")
+    .replace(/im/g, "imes")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat");
 
+    if (texto.length == 0) {
+      document.getElementById("ejecutado").style.display = "none";
+      document.getElementById("ningunmensaje").style.display = "block"; 
+    }
 
-  MostrarMensaje(textoEncriptado);
+    MostrarMensaje(textoEncriptado);
 }
 
 function desencriptar() {
@@ -41,6 +45,12 @@ function desencriptar() {
     .replace(/imes/g, "i")
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
+
+
+    if (texto.length == 0) {
+      document.getElementById("ejecutado").style.display = "none";
+      document.getElementById("ningunmensaje").style.display = "block"; 
+    }
 
   MostrarMensaje(textoDesencriptado);
 }
