@@ -30,7 +30,7 @@ function encriptar() {
 
     if (texto.length == 0) {
       document.getElementById("ejecutado").style.display = "none";
-      document.getElementById("ningunmensaje").style.display = "block"; 
+      document.getElementById("ningunmensaje").style.display = "flex"; 
     }
 
     MostrarMensaje(textoEncriptado);
@@ -45,12 +45,13 @@ function desencriptar() {
     .replace(/imes/g, "i")
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
+    
+    MostrarMensaje(textoDesencriptado);
 
-
-    if (texto.length == 0) {
+    if (textoEncriptado.length == 0) {
       document.getElementById("ejecutado").style.display = "none";
-      document.getElementById("ningunmensaje").style.display = "block"; 
+      document.getElementById("ningunmensaje").style.display = "flex"; 
     }
 
-  MostrarMensaje(textoDesencriptado);
+   
 }
