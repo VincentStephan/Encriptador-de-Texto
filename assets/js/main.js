@@ -4,6 +4,16 @@ function esconderNingunmensaje() {
   document.getElementById("ningunmensaje").style.display = "none";
 }
 
+function mostrarAlerta() {
+     Swal.fire({
+      title: '¡Texto copiado al portapapeles!',
+      html: ' Gracias por usar mi encriptador.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    })
+}
+
+
 function MostrarMensaje(mensaje) {
   // Muestra el mensaje proporcionado en el campo de texto "textoEjecutado"
   let texto = document.getElementById("textoEjecutado");
@@ -34,6 +44,7 @@ function encriptar() {
     }
 
     MostrarMensaje(textoEncriptado);
+    
 }
 
 function desencriptar() {
@@ -48,10 +59,15 @@ function desencriptar() {
     
     MostrarMensaje(textoDesencriptado);
 
+    
+
     if (textoEncriptado.length == 0) {
       document.getElementById("ejecutado").style.display = "none";
       document.getElementById("ningunmensaje").style.display = "flex"; 
     }
 
+
+
    
 }
+
